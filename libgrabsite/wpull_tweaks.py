@@ -49,7 +49,7 @@ class DupeSpottingProcessingRule(ProcessingRule):
 				# Don't extract links from pages we've already seen
 				# to avoid loops that descend a directory endlessly
 				print("DUPE {}\n  OF {}".format(url, dupe_of))
-                                _logger.info(f"DUPE: '{url}' -OF- '{dupe_of}'")
+				_logger.info(f"DUPE: '{url}' -OF- '{dupe_of}'")
 				return
 			else:
 				if dupes_db is not None:
