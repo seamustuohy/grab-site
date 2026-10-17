@@ -1,6 +1,7 @@
 import os
 import hashlib
 import functools
+import logging
 
 from wpull.database.sqltable import SQLiteURLTable
 from wpull.document.html import HTMLReader
@@ -10,6 +11,7 @@ from libgrabsite import dupespotter, __version__
 from libgrabsite.dupes import DupesOnDisk
 
 from wpull.backport.logging import StyleAdapter
+
 _logger = StyleAdapter(logging.getLogger(__name__))
 
 def response_body_size(response) -> int:
